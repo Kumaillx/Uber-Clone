@@ -90,12 +90,13 @@ body {
 
 .about-dropdown-menu {
   position: absolute;
-  top: 52px;
-  /* left: 0; */
-  background: #ffffff;
-  /* color: #444; */
+  top: 2.5rem;
+  left: 0;
+  background: #222;
+  color: white;
   min-width: 140px;
   border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   z-index: 100;
   padding: 0.5rem 0;
   display: flex;
@@ -103,12 +104,13 @@ body {
 }
 
 .about-dropdown-menu a {
-  color: rgb(0, 0, 0);
+  color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .about-dropdown-menu a:hover {
-  background: rgba(240, 240, 240, 0.703);
+  background: #444;
 }
+
