@@ -1,4 +1,4 @@
-import React from 'react';
+
 import RideList from '../components/RideList';
 
 const Rides = () => {

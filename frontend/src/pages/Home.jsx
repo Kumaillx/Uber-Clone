@@ -1,4 +1,3 @@
-import React from 'react';
 import RideForm from '../components/RideForm';
 
 const Home = () => {
