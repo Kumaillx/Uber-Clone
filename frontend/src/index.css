@@ -13,23 +13,38 @@ body {
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
+  height: 50px;
 }
-
+ 
 .navbar a {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-left: 1rem;
   text-decoration: none;
 }
 
 .footer {
   text-align: center;
-  padding: 1rem;
   background: #000;
   color: white;
   position: fixed;
-  width: 100%;
+  width: 98%;
+  margin-left: 13px;
   bottom: 0;
+  align-self: center;
+  align-content: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-size: larger;
+    cursor: pointer;
 }
+
+.footer:hover {
+  background: #444;
+  color: white;
+  
+}
+
 
 .ride-form, .ride-list {
   max-width: 500px;
@@ -57,4 +72,44 @@ body {
 
 .ride-form button:hover {
   background-color: #444;
+}
+
+.ride-form input, .ride-form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.navbar-about-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.about-dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: #222;
+  color: white;
+  min-width: 140px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-dropdown-menu a {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.about-dropdown-menu a:hover {
+  background: #444;
 }
