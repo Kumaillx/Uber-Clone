@@ -1,18 +1,26 @@
-import RideForm from "./components/RideForm";
+import { browserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import RideList from "./components/RideList";
 
+import Rides from "./pages/Rides";
+import Home from "./pages/Home";
+import "./index.css";
 
 
 const App = () => {
   
   return (
-    
-    <div className="App">
-      <RideForm />
-    </div>
-  
+    <Router>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rides" element={<Rides />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
-}
+};      
+  
 export default App;
