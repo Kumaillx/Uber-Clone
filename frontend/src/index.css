@@ -175,18 +175,23 @@ cursor: pointer;
   align-items: center;
 }
 
+/* Home page Styles */
+/* Main home page */
 .home-hero {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 64px 5vw 0 5vw;
+  padding: 32px 5vw 0 5vw;
   min-height: 80vh;
   background: #fff;
 }
 
+/* The left side of the hero section  */
 .home-hero-left {
   flex: 1;
   max-width: 600px;
+  margin-top: -30px;
+  
 }
 
 .home-hero-title {
@@ -315,13 +320,14 @@ cursor: pointer;
 }
 
 .home-hero-img {
-  width: 500px;
-  height: 350px;
+  width: 700px;
+  height: 450px;
   object-fit: cover;
   border-radius: 32px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   position: relative;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .home-hero-img img {

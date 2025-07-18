@@ -1,4 +1,5 @@
-import RideForm from '../components/RideForm';
+// import RideForm from '../components/RideForm';
+import homeImg from '../assets/Home-img1.jpg';
 
 const Home = () => {
   return (
@@ -52,7 +53,7 @@ const Home = () => {
         {/* Replace src with your image path */}
         <img
           className="home-hero-img"
-          src="your-image-path.jpg"
+          src={homeImg}
           alt="Uber ride"
         />
       </div>
