@@ -62,9 +62,15 @@ function Navbar() {
                     </div>
                     {aboutOpen && (
                         <div className="about-dropdown-menu">
-                            <Link to="/about/company">Company</Link>
-                            <Link to="/about/team">Team</Link>
-                            <Link to="/about/contact">Contact</Link>
+                            <Link to="/about/company">About us</Link>
+                            <Link to="/about/team">Our Offerings</Link>
+                            <Link to="/about/contact">How Uber Works</Link>
+                            <Link to="/about/contact">Sustainability</Link>
+                            <Link to="/about/contact">Newsroom</Link>
+                            <Link to="/about/contact">Investor Relations</Link>
+                            <Link to="/about/contact">Autonomous</Link>
+                            <Link to="/about/contact">Blog</Link>
+                            <Link to="/about/contact">Careers</Link>
                         </div>
                     )}
                 </div>
