@@ -1,38 +1,37 @@
 import React from "react";
 
-const pricesData = [
-    { type: "UberX", baseFare: "$2.50", perMile: "$1.20", perMinute: "$0.25" },
-    { type: "UberXL", baseFare: "$3.50", perMile: "$1.75", perMinute: "$0.35" },
-    { type: "Uber Black", baseFare: "$7.00", perMile: "$3.00", perMinute: "$0.65" },
+const services = [
+    { name: "UberX", price: "$10 - $15" },
+    { name: "UberXL", price: "$15 - $20" },
+    { name: "Uber Black", price: "$25 - $35" },
+    { name: "Uber SUV", price: "$35 - $50" },
 ];
 
-const Prices = () => (
-    <div style={{ maxWidth: 600, margin: "40px auto", padding: 24 }}>
-        <h2>Ride Prices</h2>
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-                <tr>
-                    <th style={{ borderBottom: "1px solid #ccc", textAlign: "left", padding: 8 }}>Type</th>
-                    <th style={{ borderBottom: "1px solid #ccc", textAlign: "left", padding: 8 }}>Base Fare</th>
-                    <th style={{ borderBottom: "1px solid #ccc", textAlign: "left", padding: 8 }}>Per Mile</th>
-                    <th style={{ borderBottom: "1px solid #ccc", textAlign: "left", padding: 8 }}>Per Minute</th>
-                </tr>
-            </thead>
-            <tbody>
-                {pricesData.map((price) => (
-                    <tr key={price.type}>
-                        <td style={{ padding: 8 }}>{price.type}</td>
-                        <td style={{ padding: 8 }}>{price.baseFare}</td>
-                        <td style={{ padding: 8 }}>{price.perMile}</td>
-                        <td style={{ padding: 8 }}>{price.perMinute}</td>
+const Prices = () => {
+    return (
+        <div className="prices-page" style={{ maxWidth: 500, margin: "40px auto", padding: 24, background: "#fff", borderRadius: 8, boxShadow: "0 2px 8px #eee" }}>
+            <h1 style={{ marginBottom: 24 }}>Uber Service Prices</h1>
+            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                    <tr>
+                        <th style={{ textAlign: "left", padding: 8, borderBottom: "2px solid #eee" }}>Service</th>
+                        <th style={{ textAlign: "left", padding: 8, borderBottom: "2px solid #eee" }}>Estimated Price</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
-        <p style={{ marginTop: 16, color: "#555" }}>
-            * Prices are estimates and may vary based on location, time, and demand.
-        </p>
-    </div>
-);
+                </thead>
+                <tbody>
+                    {services.map((service) => (
+                        <tr key={service.name}>
+                            <td style={{ padding: 8, borderBottom: "1px solid #f5f5f5" }}>{service.name}</td>
+                            <td style={{ padding: 8, borderBottom: "1px solid #f5f5f5" }}>{service.price}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <p style={{ marginTop: 24, color: "#888" }}>
+                Prices are estimates and may vary based on location, time, and demand.
+            </p>
+        </div>
+    );
+};
 
 export default Prices;

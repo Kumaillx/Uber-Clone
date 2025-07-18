@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Rides from "./pages/Rides";
 import Home from "./pages/Home";
 import "./index.css";
+import Prices from "./pages/Prices";
 
 
 const App = () => {
@@ -16,6 +17,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rides" element={<Rides />} />
+          <Route path="/about/company" element={<div>About Us</div>} />
+          <Route path="/pages/prices" element={<Prices/>} />
+
         </Routes>
       </main>
       <Footer />

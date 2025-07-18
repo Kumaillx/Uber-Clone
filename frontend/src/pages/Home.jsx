@@ -1,7 +1,23 @@
 import RideForm from '../components/RideForm';
 import homeImg from '../assets/Home-img1.jpg';
+import { useNavigate } from "react-router-dom";
+import prices from '../pages/Prices.jsx';
+
 
 const Home = () => {
+//   Handling the navigation to the Prices page  
+  const navigate = useNavigate();
+
+  const handleSeePrices = (e) => {
+    //prevent the default form submission
+    e.preventDefault();
+    // Navigate to the Prices page
+    // Assuming the Prices page
+    navigate("pages/prices");
+
+    // navigate({prices});
+  };
+
   return (
     <div className="home-hero">
       <div className="home-hero-left">
@@ -9,8 +25,14 @@ const Home = () => {
         <RideForm/>
         <form className="home-hero-form">
           <div className="home-hero-form-inputs">
-
-            <button className="home-prices-btn">See prices</button>
+            <button
+                // Should render towards the Prices page
+              className="home-prices-btn"
+              onClick={handleSeePrices}
+              type="button"
+            >
+              See prices
+            </button>
             <span className="home-login-link">
               Log in to see your recent activity
             </span>
