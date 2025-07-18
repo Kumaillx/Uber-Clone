@@ -32,14 +32,14 @@ function Navbar() {
 
     return (
         <nav className="navbar" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            {/* Logo on the left */}
+            
             <div style={{ display: "flex", alignItems: "center" }}>
                 <h1 style={{ marginRight: "24px" }}>Uber Clone</h1>
                 {/* Navigation items */}
-                <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Ride</h3>
-                <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Drive</h3>
-                <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Business</h3>
-                <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Uber Eats</h3>
+                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Ride</h3>
+                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Drive</h3>
+                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Business</h3>
+                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Uber Eats</h3>
                 <div className="navbar-about-dropdown" ref={dropdownRef}>
                     <div
                         className="about-trigger"
