@@ -1,7 +1,7 @@
 import RideForm from '../components/RideForm';
 import homeImg from '../assets/Home-img1.jpg';
 import { useNavigate } from "react-router-dom";
-import prices from '../pages/Prices.jsx';
+
 
 
 const Home = () => {
@@ -47,6 +47,8 @@ const Home = () => {
         />
       </div>
     </div>
+
+
   );
 };
 
