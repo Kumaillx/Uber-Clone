@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import ArrowDown from "../assets/ArrowDown.svg"; 
-
+import ArrowDown from "../assets/ArrowDown.svg";
 
 function Navbar() {
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -13,44 +12,29 @@ function Navbar() {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setAboutOpen(false);
             }
         };
         if (aboutOpen) {
             document.addEventListener("mousedown", handleClickOutside);
-        } else {
-            document.removeEventListener("mousedown", handleClickOutside);
         }
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [aboutOpen]);
 
-    // Import the arrow down image
-
     return (
-        <nav className="navbar" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            
-            <div style={{ display: "flex", alignItems: "center" }}>
-                <h1 style={{ marginRight: "24px" }}>Uber Clone</h1>
-                {/* Navigation items */}
-                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Ride</h3>
-                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Drive</h3>
-                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Business</h3>
-                <h3 style={{ cursor:"pointer" ,margin: "0 12px", fontSize: "1rem" }}>Uber Eats</h3>
+        <nav className="navbar">
+            <div className="navbar-left">
+                <h1 className="navbar-logo">Uber Clone</h1>
+                <h3 className="navbar-link">Ride</h3>
+                <h3 className="navbar-link">Drive</h3>
+                <h3 className="navbar-link">Business</h3>
+                <h3 className="navbar-link">Uber Eats</h3>
                 <div className="navbar-about-dropdown" ref={dropdownRef}>
                     <div
                         className="about-trigger"
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            margin: "0 12px",
-                            fontSize: "1rem",
-                            cursor: "pointer",
-                            userSelect: "none",
-                        }}
                         onClick={handleAboutClick}
                     >
                         About
@@ -75,7 +59,7 @@ function Navbar() {
                     )}
                 </div>
             </div>
-            <div>
+            <div className="navbar-right">
                 <Link to="/">Home</Link>
                 <Link to="/rides" style={{ marginLeft: "16px" }}>Rides</Link>
             </div>
