@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
+import ArrowDown from "../assets/ArrowDown.svg"; 
 
-const Navbar = () => {
+
+function Navbar() {
     const [aboutOpen, setAboutOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -11,10 +13,8 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)
-            ) {
+            if (dropdownRef.current &&
+                !dropdownRef.current.contains(event.target)) {
                 setAboutOpen(false);
             }
         };
@@ -28,6 +28,8 @@ const Navbar = () => {
         };
     }, [aboutOpen]);
 
+    // Import the arrow down image
+
     return (
         <nav className="navbar" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             {/* Logo on the left */}
@@ -39,12 +41,25 @@ const Navbar = () => {
                 <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Business</h3>
                 <h3 style={{ margin: "0 12px", fontSize: "1rem" }}>Uber Eats</h3>
                 <div className="navbar-about-dropdown" ref={dropdownRef}>
-                    <h3
-                        style={{ margin: "0 12px", fontSize: "1rem", cursor: "pointer" }}
+                    <div
+                        className="about-trigger"
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            margin: "0 12px",
+                            fontSize: "1rem",
+                            cursor: "pointer",
+                            userSelect: "none",
+                        }}
                         onClick={handleAboutClick}
                     >
                         About
-                    </h3>
+                        <img
+                            className={`ArrowDown${aboutOpen ? " rotated" : ""}`}
+                            src={ArrowDown}
+                            alt="arrow down"
+                        />
+                    </div>
                     {aboutOpen && (
                         <div className="about-dropdown-menu">
                             <Link to="/about/company">Company</Link>
@@ -60,6 +75,6 @@ const Navbar = () => {
             </div>
         </nav>
     );
-};
+}
 
 export default Navbar;

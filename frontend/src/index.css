@@ -92,8 +92,8 @@ body {
   position: absolute;
   top: 2.5rem;
   left: 0;
-  background: #222;
-  color: white;
+  background: #ffffff;
+  /* color: white; */
   min-width: 140px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -104,13 +104,35 @@ body {
 }
 
 .about-dropdown-menu a {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 0.5rem 1rem;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .about-dropdown-menu a:hover {
-  background: #444;
+  background: #f0ededfd;
 }
 
+.ArrowDown {
+  height: 13px;
+  width: 15px;
+  margin-left: 5px;
+  margin-top: 5px;
+  /* background: red; */
+  transition: transform 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ArrowDown.rotated {
+  transform: rotate(180deg);
+}
+
+/* Optional: ensure the trigger is always flex-aligned */
+.about-trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
