@@ -17,7 +17,38 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rides" element={<Rides />} />
-          <Route path="/about/company" element={<div>About Us</div>} />
+
+          <Route path="/about/company" 
+          element={
+            <div>About Us</div>
+            
+            } />
+          
+          <Route path="/about/Offerings" element=
+          {
+            <div>Hello I Offer</div>
+          } />
+          
+          <Route path="/about/hr" 
+          element=
+          {
+            <div>Hello I am HR</div>
+          } />
+
+          <Route path="/about/works" element={<div>How Uber Works</div>} />
+          
+          <Route path="/about/sustain" element={<div>Sustainability</div>} />
+          
+          <Route path="/about/news" element={<div>Newsroom</div>} />
+          
+          <Route path="/about/invest" element={<div>Investor Relations</div>} />
+          
+          <Route path="/about/auto" element={<div>Autonomous</div>} />
+          
+          <Route path="/about/blog" element={<div>Blog</div>} />
+          
+
+
           <Route path="/pages/prices" element={<Prices/>} />
 
         </Routes>
